@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-webkit-box-sizing: border-box;
+	-moz-webkit-box-sizing: border-box;
+	-ms-webkit-box-sizing: border-box;
+	-o-webkit-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+}
+body{
+	background: url('../img/bg4.png');
+	/*para k abarque el 100% de ancho*/
+	background-size: cover;
+	/*fondo se quede pegado a pantalla*/
+	background-attachment: fixed;
+	font-family: 'Open sans', Sans-serif Arial, Helvetica;
+}
+a{
+	/*para quitar el subrayado*/
+	text-decoration: none;}
+
+.contenedor{
+	width: 90%;
+	max-width: 700px;
+	/*para centrar el contenido*/
+	margin: auto;
+	/*contenedor tenga un alto del 100%*/
+	height: 100%;
+	/*activar flex xk keremos usar flexbox*/
+	display: flex;
+	/**/
+	align-items: center;
+}
+.tarjeta{
+	background: #fff;
+	/*margen arriba y abajo 40 px y a los lados 0*/
+	margin: 40px 0;
+	/*esquinas redondeadas*/
+	border-radius: 5px;
+	/*todo lo que este afuera de la tarjeta va a desaparecer*/
+	overflow: hidden;
+	z-index: 1000;
+	/*ancho*/
+	width: 100%;
+}
+
+/* ---------------------------------------*/
+/* -----Slider Banner */
+/* ---------------------------------------*/
+
+.slider_banner{
+	/*todo lo k este afuera del section banner c oculte*/
+	overflow: hidden;
+	/*uso de menu solucionamos xd*/
+	z-index: 1000;
+	/*permitir decirle a los elementos hijos las imagenes 
+	colocarse a la derecha*/
+	position: relative;
+}
+.slider_banner .banner{
+	/**/
+	position: relative;
+	/*ancho de 100%*/
+	width: 100%;
+}
+.slider_banner .banner img{
+	/*eliminamos el espaciado*/
+	vertical-align: top;
+	width: 100%;
+	/*posicionar cada imagen como nosotros kramos */
+	position: absolute;
+	/*dependiendo del tamaño de la imagen creo xd*/
+	top: 0;
+	left: 100%;
+}
+
+.slider_banner .flecha-banner{
+	font-size: 35px;
+	line-height: 35px;
+	color: rgba(250,250,20,.4);
+	position: absolute;
+	top: 50%;
+	z-index: 1100;
+}
+.slider_banner .flecha-banner:hover{
+	color: rgba(250,250,20,.8);
+}
+/*flechas*/
+.slider_banner .anterior{
+	left: 20px;
+}
+.slider_banner .siguiente{
+	right: 20px;
+}
+
+
+/* ---------------------------------------*/
+/* -----Slider Info */
+/* ---------------------------------------*/
+
+.slider_info{
+	text-align: center;
+	overflow: hidden;
+	padding: 20px 0;
+	z-index: 1000;
+	position: relative;
+}
+/*seccion informacion*/
+.slider_info .informacion{
+	width: 100%;
+}
+.slider_info .informacion article{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.slider_info .informacion article .slide{
+	background: #fff;
+	width: 100%;
+	left: 100%;
+	position: absolute;
+	/*cambie 20px 80px a 0*/
+	padding: 20px 0;
+	text-align: center;
+}
+.slider_info .flecha-info{
+	font-size: 35px;
+	line-height: 35px;
+	color: #e6e6e6;
+	position: absolute;
+	/*POSICIONAME ARRIBA Y ABAJO 50%*/
+	top: 50%;
+	z-index: 1000;
+}
+.slider_info .flecha-info:hover{
+	color: #6ed279;
+}
+.slider_info .flecha-info.anterior{
+	left: 20px;
+}
+.slider_info .flecha-info.siguiente{
+	right: 20px;
+}
+
+/*estilo para los slide de info*/
+.slider_info .informacion .Nombre{
+	color: #444;
+	font-size: 38px;
+	line-height: 38px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+.slider_info .informacion .trabajo{
+	color: #55acee;
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+.slider_info .informacion .pais{
+	color: #8d8d8d;
+	font-size: 14px;
+	line-height: 14px;
+}
+.slider_info .informacion .pais img{
+	position: relative;
+	top: 2px;
+	margin-right: 10px;
+}
+
+/*texto*/
+.slider_info .informacion .texto{
+	color: #55acee;
+	font-size: 18px;
+	line-height: 24px;
+}
+/*subtitulo*/
+.slider_info .informacion .subtitulo{
+	color: #444;
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 16px;
+}
+
+
+
+
+
+/*Botones slider info*/
+.slider_info .botones{
+	width: 100%;
+}
+.slider_info .botones span{
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin: 0 10px;
+	border-radius: 50%;
+	background: #e6e6e6;
+}
+.slider_info .botones .active{
+	background:  #6ed279;
+}
+
+/*REDES SOCIALES*/
+.redes-sociales{
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+}
+.redes-sociales a{
+	display: inline-block;
+	width: 50px;
+	/*cambie 50 a 25*/
+	height: 25px;
+	line-height: 20px;
+	padding: 14px 0;
+	color: #fff;
+	background: #000;
+	border-radius: 50%;
+	margin: 0 10px;
+}
+.redes-sociales .behance{
+	background: #1769ff;
+}
+.redes-sociales .facebook{
+	background: #3b5998;
+}
+.redes-sociales .twitter{
+	background: #55acee;
+}
